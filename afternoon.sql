@@ -139,8 +139,52 @@ where name
 ilike'%black%';
 
 
+select first_name, last_name
+from employee
+where city = 'Calgary';
 
+select *
+from employee
+order by birth_date desc;
 
+select *
+from employee
+order by birth_date;
 
+select *
+from employee
+where reports_to = 2;
 
+select count(*)
+from employee
+where city = 'Lethbridge';
 
+select count(*)
+from invoice
+where billing_country = 'USA';
+
+select *
+from invoice
+order by total desc;
+
+select *
+from invoice
+order by total;
+
+select *
+from invoice
+where total > 5;
+
+select count(*)
+from invoice
+where total < 5;
+
+select *
+from invoice
+where billing_state in ('CA', 'TX', 'AZ');
+
+select avg(total)
+from invoice;
+
+select sum(total)
+from invoice;
